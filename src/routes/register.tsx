@@ -24,9 +24,7 @@ import { COUNTRIES, formatNaira, whatsappLink } from "@/lib/site";
 export const PENDING_COURSE_KEY = "esonet_pending_course";
 
 export const Route = createFileRoute("/register")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    course: typeof search.course === "string" ? search.course : undefined,
-  }),
+  validateSearch: z.object({ course: z.string().optional() }),
   head: () => ({
     meta: [
       { title: "Register & Enroll — Esonet Concept AI Skill Training" },
