@@ -175,8 +175,8 @@ function Dashboard() {
                   <div className="grid gap-0 md:grid-cols-[240px_1fr]">
                     <CourseImage
                       path={course?.cover_image_url ?? null}
-                      alt={course?.title ?? "Course cover"}
-                      className="h-40 w-full object-cover md:h-full"
+                      title={course?.title ?? "Course"}
+                      className="h-40 w-full md:h-full"
                     />
                     <div>
                       <CardHeader className="flex flex-row flex-wrap items-start justify-between gap-3">
